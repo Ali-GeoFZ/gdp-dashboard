@@ -1,6 +1,6 @@
 import streamlit as st 
 import pandas as pd 
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 st.title('Hallloo')
 
@@ -8,5 +8,9 @@ st.write('**Data Science Course 2024**')
 
 df = pd.read_csv('data/Bastar Craton.csv')
 
-st.dataframe(df)
+cat_names = df.columns.tolist()[27:]
 
+el1 = st.selectbox('selext element', cat_names)
+st.write(el1)
+
+st.dataframe(df)
